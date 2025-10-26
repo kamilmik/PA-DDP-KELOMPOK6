@@ -127,8 +127,39 @@ apakah username baru ada di database user (jika ada maka program akan menampikan
 <img width="570" height="111" alt="image" src="https://github.com/user-attachments/assets/051a669a-4e76-45e7-8768-39bfdda01767" />
 
 username baru dibatasi 5 - 20 karakter, dan tidak boleh menggunakan angka, berikut jika user salah menginput:\
+<img width="860" height="81" alt="image" src="https://github.com/user-attachments/assets/689ea86c-dcb2-4bdc-9a8a-20b2a58f64c4" />
 
+password juga dibatasi 8 - 15 karakter, berikut jika user salah menginput: \
+<img width="767" height="212" alt="image" src="https://github.com/user-attachments/assets/1902c737-e051-42b5-b86c-136f749e1f5d" />
 
+### MENU UTAMA
+pada menu utama User, program memberi beberapa data, Katalog bunga (Template) yang bisa dibeli, dan data histori transaksi yang\
+dilakukan user (yang sedang login), lalu ada menu opsi memilih 1. Beli Bunga, 2. Top Up saldo, 3. Logout. \
+<img width="1004" height="649" alt="image" src="https://github.com/user-attachments/assets/be30e1dc-6709-499a-9f13-9f6e60f65164" />
+
+- 1. Beli Bunga
+     ketika user memilih opsi beli bunga, maka akan diarahkan lagi pada sub menu dengan 3 opsi.\
+     <img width="377" height="207" alt="image" src="https://github.com/user-attachments/assets/a9c2090b-4962-413b-83a0-a3e5a095a37b" />
+
+     - opsi 1. Bunga Template :\
+       User akan di beri list katalog bunga untuk memilih id mana yang ingin di beli user, setelah itu program akan cek apakah id\
+       yang di input sesuai pada tabel, jika iya maka program akan cek saldo user apakah cukup untuk membeli bunga yang dipilih\
+       <img width="520" height="229" alt="image" src="https://github.com/user-attachments/assets/b7ff0a75-386d-4797-adfe-6fa33ee9336b" />
+
+       jika user salah input id : \
+       <img width="487" height="279" alt="image" src="https://github.com/user-attachments/assets/cb244746-1607-4219-ae00-b16e94ee3600" />
+
+       Jika User benar menginput id, maka program akan menanyakan apakah user yakin untuk membeli produk? (y/n) jika user memilih\
+       'n' maka program akan mengembalikan user ke menu sebelumnya, dan jika 'y' maka program akan cek apakah saldo user cukup\
+       untuk membeli produk, jika ya:\
+       <img width="556" height="481" alt="image" src="https://github.com/user-attachments/assets/c6d10dc4-a92b-4265-8024-b84af7fd8333" />
+
+       jika saldo user tidak cukup untuk membeli produk:\
+       
+ 
+
+     
+     - opsi 2. Bunga Kustom :\
 
 
 
