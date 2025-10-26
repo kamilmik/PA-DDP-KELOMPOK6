@@ -144,6 +144,8 @@ dilakukan user (yang sedang login), lalu ada menu opsi memilih 1. Beli Bunga, 2.
      - opsi 1. Bunga Template :\
        User akan di beri list katalog bunga untuk memilih id mana yang ingin di beli user, setelah itu program akan cek apakah id\
        yang di input sesuai pada tabel, jika iya maka program akan cek saldo user apakah cukup untuk membeli bunga yang dipilih\
+       setiap pembelian yang berhasil user akan dihitung pembelian 1, jika sudah melakukan 3 pembelian maka user mendapatkan\
+       voucher sebesar 50 % yang bisa di pakai di pembelian ke 4.\
        <img width="520" height="229" alt="image" src="https://github.com/user-attachments/assets/b7ff0a75-386d-4797-adfe-6fa33ee9336b" />
 
        jika user salah input id : \
@@ -155,11 +157,51 @@ dilakukan user (yang sedang login), lalu ada menu opsi memilih 1. Beli Bunga, 2.
        <img width="556" height="481" alt="image" src="https://github.com/user-attachments/assets/c6d10dc4-a92b-4265-8024-b84af7fd8333" />
 
        jika saldo user tidak cukup untuk membeli produk:\
+       <img width="610" height="285" alt="image" src="https://github.com/user-attachments/assets/2a0fc32e-6035-40d7-83b1-e96d258f8572" />
+
+       jika user input selain angka : \
+       <img width="500" height="287" alt="image" src="https://github.com/user-attachments/assets/4f1a6af2-3d6d-4a4a-b3e6-ecbe190caee9" />
+
+     - opsi 2. Bunga Kustom :\
+       pertama user akan ditanya bunga asli atau palsu(jika asli lebih mahal, dan jika palsu murah):\
+       <img width="281" height="149" alt="image" src="https://github.com/user-attachments/assets/16a08d5a-efc3-42b0-b0b8-7c04bc324d6c" />
+
+       lalu User akan ditanya jenis bunga nya apa dengan pilihan :\
+       <img width="242" height="171" alt="image" src="https://github.com/user-attachments/assets/522093d1-c175-4201-977b-11929069f945" />
+
+       Lalu user akan ditanya warna dominan :\
+       <img width="234" height="173" alt="image" src="https://github.com/user-attachments/assets/d8a72f8a-6c4a-4b98-82eb-b051248d4c7d" />
+
+       lalu user akan ditanya ukuran buket, harga tergantung ukuran :\
+       <img width="229" height="118" alt="image" src="https://github.com/user-attachments/assets/4a613668-d9cb-4097-b791-d10f2d09a05b" />
+
+       lalu user akan ditanya berapa tangkai yang dipakai dalam buket, satu tangkai memiliki nominal sendiri, maks input tangkai adalah 50:\
+       <img width="368" height="63" alt="image" src="https://github.com/user-attachments/assets/9c719aaf-e401-4f2a-b8e4-b8739c3e5316" />
+
+       lalu user akan ditanya apakah buket menggunakan uang asli atau tidak, jika tidak maka program akan melanjutkan pembayaran, jika iya\
+       maka user diminta untuk menginput total yang diinginkan (100.000 - 1.000.000) :\
+       <img width="483" height="112" alt="image" src="https://github.com/user-attachments/assets/bc42755d-7fea-4bcb-a3e7-1e43c73bb7ba" />
+
+       lalu user akan diminta untuk membeli catatan tambahan dengan memberi maks 20 kata catatan :\
+       <img width="783" height="149" alt="image" src="https://github.com/user-attachments/assets/b5356239-b649-4abc-b5fc-77abe351d08f" />
+
+       terakhir user akan diberi program sebuah invoice pembelian, dengan total hitungan yang sudah di kalkulasi, user dapat memilih\
+       apakah pesanan sudah tepat atau tidak kembali :\
+       <img width="766" height="266" alt="image" src="https://github.com/user-attachments/assets/e1dca023-aa1b-4229-b652-6595a67c2132" />
+
+       maka setelah user mensetujui dan saldo cukup, pesanan akan masuk ke database pesanan, serta dalam status pending dan menunggu\
+       diubah oleh admin carla. jika admin carla sudah mengubah status pesanan menjadi selesai, maka user berhasil mendapatkan \
+       +1 total pembelian, jika sudah mencapai 3, maka user mendapatkan voucher 50% yang dapat digunakan pada pembelian selanjutnya.
        
+
+
+
+
+
  
 
-     
-     - opsi 2. Bunga Kustom :\
+
+
 
 
 
