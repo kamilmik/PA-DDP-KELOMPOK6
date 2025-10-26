@@ -105,8 +105,23 @@ admin CRUD. berikut Menu admin kelola pesanan setelah login (Carla) :
      <img width="956" height="305" alt="image" src="https://github.com/user-attachments/assets/084806c7-cd67-4117-9b1d-6ca321ebbee8" />
 
 ## USER :
-setelah pada menu awal user memilih menu pengguna (2) 
+setelah pada menu awal user memilih menu pengguna (2) maka user akan diarahkan untuk memilih opsi 1. login, 2. Register, 3. Kembali.\
+<img width="344" height="201" alt="image" src="https://github.com/user-attachments/assets/b0ad26ce-a4e0-4b4e-8546-4d38d8a64034" />
+
 ### Login
+Setelah User memilih opsi login, program akan memberi input username dan input password pengguna, dan akan mengecek apakah username\
+atau password yang diinput ada pada database users, jika iya maka program akan mengalihkan user ke menu user. dan jika tidak sesuai\
+maka program akan memberi kesempatan 3 kali percobaan, setelah 3 kali gagal maka program akan memberi waktu tenggat 60 detik \
+(6 detik pada program untuk efisiensi percobaan) lalu mengembalikan user ke menu awal, berikut menu login: \
+<img width="367" height="235" alt="image" src="https://github.com/user-attachments/assets/e8334630-6b8f-4d3a-8862-6baae8832dbd" />
+
+jika user salah menginput username/ password maka akan memberi peringatan :\
+<img width="502" height="162" alt="image" src="https://github.com/user-attachments/assets/e7b07588-c55d-4c13-b136-d646ee00438e" />
+
+Jika sudah 3 kali maka User harus menunggu 60 detik setelah itu lalu di kembalikan ke menu sebelumnya : \
+
+
+
 
 
 
