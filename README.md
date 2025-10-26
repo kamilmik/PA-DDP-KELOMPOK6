@@ -191,8 +191,33 @@ dilakukan user (yang sedang login), lalu ada menu opsi memilih 1. Beli Bunga, 2.
 
        maka setelah user mensetujui dan saldo cukup, pesanan akan masuk ke database pesanan, serta dalam status pending dan menunggu\
        diubah oleh admin carla. jika admin carla sudah mengubah status pesanan menjadi selesai, maka user berhasil mendapatkan \
-       +1 total pembelian, jika sudah mencapai 3, maka user mendapatkan voucher 50% yang dapat digunakan pada pembelian selanjutnya.
+       +1 total pembelian, jika sudah mencapai 3, maka user mendapatkan voucher 50% yang dapat digunakan pada pembelian selanjutnya.\
        
+- 2. Top Up Saldo
+     pada menu ini bertujuan untuk user top up saldo berupa e-money, pertama user akan diberi opsi menu seperti berikut : \
+     <img width="352" height="321" alt="image" src="https://github.com/user-attachments/assets/ac5f41cb-2251-43ee-8dcb-28ba55055a75" />
+
+     jika user salah input :\
+     <img width="322" height="70" alt="image" src="https://github.com/user-attachments/assets/404aa404-9556-4ef0-9eb4-aca50dbc6823" />
+
+     setelah user input salah satu nominal, maka user akan dialihkan ke halaman transaksi dengan meminta user memasukkan password\
+     akun user yang sedang login:\
+     <img width="460" height="173" alt="image" src="https://github.com/user-attachments/assets/5b5cabe2-fe4a-4c34-82d9-84485d52f47f" />
+
+     jika user salah memasukkan password sebanyak 3 kali maka program akan menghentikan user selama 60 detik :\
+     <img width="563" height="455" alt="image" src="https://github.com/user-attachments/assets/a8208714-3acf-4ffa-9b38-e1bf8fc54c9e" />
+
+     setelah user memasukkan password yang benar, maka program akan memproses top up dan otomatis menambahkan saldo user sebesar topup:\
+     <img width="471" height="261" alt="image" src="https://github.com/user-attachments/assets/fb5ad8bc-cbd0-48a5-98bc-d8e91dcb5b42" />
+
+- 3. Logout
+     jika user memilih tombol logout maka program akan mengalihkan user ke menu awal.\
+
+### VOUCHER 50%
+
+
+
+
 
 
 
