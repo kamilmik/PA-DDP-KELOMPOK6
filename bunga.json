@@ -1,0 +1,20 @@
+[
+    {
+        "id": 2,
+        "nama": "Buket Lily Putih Elegan",
+        "harga": 300000,
+        "stok": 2
+    },
+    {
+        "id": 3,
+        "nama": "Buket Tulip Pelangi Ceria",
+        "harga": 350000,
+        "stok": 8
+    },
+    {
+        "id": "5",
+        "nama": "mawar",
+        "harga": 750000,
+        "stok": 15
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "username": "haloo",
+        "password": "haloo",
+        "saldo": 958000,
+        "pembelian_selesai": 4,
+        "punya_voucher": false
+    },
+    {
+        "username": "haihalo",
+        "password": "haiiiii",
+        "saldo": 0,
+        "pembelian_selesai": 0,
+        "voucher": false
+    }
+]

@@ -1,0 +1,127 @@
+[
+    {
+        "id": 1,
+        "username": "haloo",
+        "jenis": "template",
+        "item": {
+            "id": 2,
+            "nama": "Buket Lily Putih Elegan",
+            "harga": 300000,
+            "stok": 10
+        },
+        "total": 300000,
+        "status": "ok",
+        "voucher": false
+    },
+    {
+        "id": 2,
+        "username": "haloo",
+        "jenis": "template",
+        "item": {
+            "id": 2,
+            "nama": "Buket Lily Putih Elegan",
+            "harga": 300000,
+            "stok": 9
+        },
+        "total_harga": 300000,
+        "status": "selesai",
+        "voucher_digunakan": false,
+        "stok_dikurangi": true
+    },
+    {
+        "id": 3,
+        "username": "haloo",
+        "jenis": "kustom",
+        "detail": {
+            "judul": "Buket Tulip Ungu Besar (2 tangkai) Palsu",
+            "bunga": "Tulip",
+            "warna": "Ungu",
+            "ukuran": "Besar",
+            "asli": false,
+            "tangkai": 2,
+            "bentuk": "negros",
+            "nominal_uang": 0
+        },
+        "total_harga": 137000,
+        "status": "selesai",
+        "voucher_digunakan": false
+    },
+    {
+        "id": 4,
+        "username": "haloo",
+        "jenis": "template",
+        "item": {
+            "id": 2,
+            "nama": "Buket Lily Putih Elegan",
+            "harga": 300000,
+            "stok": 8
+        },
+        "total_harga": 300000,
+        "status": "pending",
+        "voucher_digunakan": false,
+        "stok_dikurangi": true
+    },
+    {
+        "id": 5,
+        "username": "haloo",
+        "jenis": "kustom",
+        "detail": {
+            "judul": "Buket Mawar Merah Kecil (10 tangkai) Palsu + Uang 100,000",
+            "bunga": "Mawar",
+            "warna": "Merah",
+            "ukuran": "Kecil",
+            "asli": false,
+            "tangkai": 10,
+            "bentuk": "hjfghfgfjh",
+            "nominal_uang": 100000
+        },
+        "total_harga": 255000,
+        "status": "selesai",
+        "voucher_digunakan": false
+    },
+    {
+        "id": 6,
+        "username": "haloo",
+        "jenis": "template",
+        "item": {
+            "id": 2,
+            "nama": "Buket Lily Putih Elegan",
+            "harga": 300000,
+            "stok": 7
+        },
+        "total_harga": 300000,
+        "status": "selesai",
+        "voucher_digunakan": false,
+        "stok_dikurangi": true
+    },
+    {
+        "id": 7,
+        "username": "haloo",
+        "jenis": "template",
+        "item": {
+            "id": 2,
+            "nama": "Buket Lily Putih Elegan",
+            "harga": 300000,
+            "stok": 4
+        },
+        "total_harga": 150000,
+        "status": "pembayaran_diterima",
+        "voucher_digunakan": true,
+        "stok_dikurangi": true
+    },
+    {
+        "id": 8,
+        "username": "haloo",
+        "jenis": "template",
+        "item": {
+            "id": 2,
+            "nama": "Buket Lily Putih Elegan",
+            "harga": 300000,
+            "stok": 3
+        },
+        "total_harga": 300000,
+        "status": "pending",
+        "voucher_digunakan": false,
+        "stok_dikurangi": true
+    }
+]
