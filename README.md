@@ -119,6 +119,16 @@ jika user salah menginput username/ password maka akan memberi peringatan :\
 <img width="502" height="162" alt="image" src="https://github.com/user-attachments/assets/e7b07588-c55d-4c13-b136-d646ee00438e" />
 
 Jika sudah 3 kali maka User harus menunggu 60 detik setelah itu lalu di kembalikan ke menu sebelumnya : \
+<img width="549" height="251" alt="image" src="https://github.com/user-attachments/assets/aa229298-368c-455d-ab43-46b9d1316962" />
+
+### Register
+Setelah User memilih opsi register, program akan memberi input username baru dan input password baru, pertama program akan cek apakah\
+apakah username baru ada di database user (jika ada maka program akan menampikan peringatan seperti berikut :)\
+<img width="570" height="111" alt="image" src="https://github.com/user-attachments/assets/051a669a-4e76-45e7-8768-39bfdda01767" />
+
+username baru dibatasi 5 - 20 karakter, dan tidak boleh menggunakan angka, berikut jika user salah menginput:\
+
+
 
 
 
