@@ -143,7 +143,7 @@ def login_admin():
     percobaan = 0
     while percobaan < 3:
         print("┌──────────────────────────────────┐")
-        print("│         🌼LOGIN ADMIN🌼          │")
+        print("│ 	    🌼LOGIN ADMIN🌼 	     │")
         print("└──────────────────────────────────┘")
         username = input("- Masukkan username: ")
         password = pwinput.pwinput("- Masukkan password: ")
@@ -153,14 +153,14 @@ def login_admin():
             time.sleep(2)
             return username
         else:
-            if percobaan < 2:
+            percobaan += 1 
+            if percobaan < 3: 
                 bersihkan_layar()
-                print(f"[!] Username atau password salah. Sisa percobaan: {2 - percobaan}🥀")
-                percobaan += 1
-            
+                print(f"[!] Username atau password salah. Sisa percobaan: {3 - percobaan}🥀")
+                
     print("\n[!] Anda telah salah memasukkan password sebanyak 3 kali🥀")
     print("Harap tunggu 60 detik untuk mencoba lagi.")
-    time.sleep(5)
+    time.sleep(6) 
     return None
 
 '''=================================================================================================================================='''
@@ -316,7 +316,7 @@ def tambah_bunga():
 def ubah_bunga():
     bersihkan_layar()
     print("┌──────────────────────────────────┐")
-    print("│        🌼 UPDATE BUKET 🌼       │")
+    print("│ 		🌼 UPDATE BUKET 🌼 		 │")
     print("└──────────────────────────────────┘")
 
     daftar_bunga = muat_bunga()
@@ -336,13 +336,13 @@ def ubah_bunga():
     
     id_bunga = input("\n- Masukkan ID buket yang ingin diupdate: ")
     bunga_ditemukan = False
+
     
     for bunga in daftar_bunga:
         if bunga['id'] == id_bunga:
             bunga_ditemukan = True
             print(f"\n- Buket yang dipilih: {bunga['nama']} (ID: {bunga['id']})")
             
-       
             while True:
                 nama_baru_str = input(f"- Masukkan nama buket baru (Enter untuk skip): ")
                 if not nama_baru_str.strip():
@@ -352,7 +352,7 @@ def ubah_bunga():
                     print("[!] Nama buket hanya boleh berisi huruf (spasi diizinkan). Coba lagi.🥀")
                 else:
                     nama_baru = nama_baru_str 
-                    break   
+                    break 	
             
             while True:
                 harga_baru_str = input(f"- Masukkan harga baru (Enter untuk skip): ")
@@ -386,7 +386,6 @@ def ubah_bunga():
                 except ValueError:
                     print("[!] Stok harus berupa angka. Silakan coba lagi.")
             
- 
             bunga['nama'] = nama_baru
             bunga['harga'] = harga_baru
             bunga['stok'] = stok_baru
@@ -399,6 +398,11 @@ def ubah_bunga():
             
             print("\n[✓] Bunga berhasil diupdate🌷")
             input("\ntekan Enter untuk kembali...")
+            break 
+    
+    if not bunga_ditemukan:
+        print(f"\n[!] Buket dengan ID '{id_bunga}' tidak ditemukan.🥀")
+        input("\ntekan Enter untuk kembali...")
 
 def hapus_bunga():
     bersihkan_layar()
