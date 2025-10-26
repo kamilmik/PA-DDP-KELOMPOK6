@@ -82,7 +82,7 @@ def daftar():
             while percobaan < 3:
                 password_baru = pwinput.pwinput("- Masukkan password (min 8 hingga 15 karakter): ")
                 
-                if not (5 <= len(username_baru) <= 15):
+                if not (5 <= len(password_baru) <= 15):
                     print("[!] Password harus memiliki minimal 8 hingga 15 karakter. <<")
                     percobaan += 1
                     time.sleep(1)
@@ -111,26 +111,27 @@ def login_user():
     
     while percobaan < 3:
         print("┌──────────────────────────────────┐")
-        print("│         🌷LOGIN USER🌷           │")
+        print("│          🌷LOGIN USER🌷         │")
         print("└──────────────────────────────────┘")
         username = input("- Masukkan username: ")
         password = pwinput.pwinput("- Masukkan password: ")
 
+        user_ditemukan = False
         for pengguna in users:
             if pengguna['username'] == username and pengguna['password'] == password:
                 print("\n[✓] Login berhasil🌷")
                 time.sleep(2)
                 return pengguna
-            
-        if percobaan < 2:
+        percobaan += 1 
+
+        if percobaan < 3: 
             bersihkan_layar()
             print(f"[!] Username atau password salah. Sisa percobaan: {3 - percobaan}🥀")
-            percobaan += 1
 
     print("\n[!] Anda telah salah memasukkan password sebanyak 3 kali🥀")
-    print("Harap tunggu 60 detik untuk mencoba lagi.")
-    time.sleep(5)
-
+    print("Harap tunggu 6 detik untuk mencoba lagi.")
+    time.sleep(6)
+    return None 
 
 def login_admin():
     bersihkan_layar()
@@ -143,7 +144,7 @@ def login_admin():
     percobaan = 0
     while percobaan < 3:
         print("┌──────────────────────────────────┐")
-        print("│ 	    🌼LOGIN ADMIN🌼 	     │")
+        print("│          🌼LOGIN ADMIN🌼        │")
         print("└──────────────────────────────────┘")
         username = input("- Masukkan username: ")
         password = pwinput.pwinput("- Masukkan password: ")
@@ -231,8 +232,8 @@ def topup(user):
 
         if not verifikasi_berhasil:
             print("\n[!] Anda telah salah memasukkan password sebanyak 3 kali.")
-            print("Proses top up dibatalkan. Harap tunggu 60 detik.")
-            time.sleep(60)
+            print("Proses top up dibatalkan. Harap tunggu 6 detik.")
+            time.sleep(6)
             return 
 
         if verifikasi_berhasil:
@@ -316,7 +317,7 @@ def tambah_bunga():
 def ubah_bunga():
     bersihkan_layar()
     print("┌──────────────────────────────────┐")
-    print("│ 		🌼 UPDATE BUKET 🌼 		 │")
+    print("│ 	    🌼 UPDATE BUKET 🌼 	  │")
     print("└──────────────────────────────────┘")
 
     daftar_bunga = muat_bunga()
@@ -349,7 +350,7 @@ def ubah_bunga():
                     nama_baru = bunga['nama'] 
                     break
                 elif not nama_baru_str.replace(" ", "").isalpha():
-                    print("[!] Nama buket hanya boleh berisi huruf (spasi diizinkan). Coba lagi.🥀")
+                    print("[!] Nama buket hanya boleh berisi huruf. Coba lagi.🥀")
                 else:
                     nama_baru = nama_baru_str 
                     break 	
@@ -371,7 +372,7 @@ def ubah_bunga():
                     print("[!] Harga harus berupa angka. Silakan coba lagi.")
                     
             while True:
-                stok_baru_str = input(f"- Masukkan stok baru (Enter untuk skip '{bunga['stok']}'): ")
+                stok_baru_str = input(f"- Masukkan stok baru (Enter untuk skip): ")
                 if not stok_baru_str.strip():
                     stok_baru = bunga['stok'] 
                     break
@@ -401,7 +402,7 @@ def ubah_bunga():
             break 
     
     if not bunga_ditemukan:
-        print(f"\n[!] Buket dengan ID '{id_bunga}' tidak ditemukan.🥀")
+        print(f"\n[!] Buket tidak ditemukan.🥀")
         input("\ntekan Enter untuk kembali...")
 
 def hapus_bunga():
@@ -440,7 +441,7 @@ def hapus_bunga():
         simpan_bunga(daftar_bunga) 
         print(f"\n[✓] Buket '{bungadihapus['nama']}' berhasil dihapus.")
     else:
-        print(f"\n[!] ID Bunga '{idhapus}' tidak ditemukan.")
+        print(f"\n[!] ID Bunga tidak ditemukan.")
     
     input("\ntekan Enter untuk kembali...")
 
@@ -459,12 +460,7 @@ def pesan_buket_template(data_pengguna):
         tabel.add_row([item['id'], item['nama'], f"{item['harga']:,}", item['stok']])
     print(tabel)
 
-    try:
-        id_pilihan = int(input("Masukkan ID Buket yang ingin dipesan: "))
-    except ValueError:
-        print("\n[!] ID harus berupa angka.")
-        time.sleep(2)
-        return
+    id_pilihan = input("Masukkan ID Buket yang ingin dipesan: ")
 
     item_dipilih = next((item for item in data_bunga if item['id'] == id_pilihan), None)
 
@@ -475,7 +471,7 @@ def pesan_buket_template(data_pengguna):
             return
 
         harga_asli = item_dipilih['harga'] 
-        harga_final = harga_asli         
+        harga_final = harga_asli 		
         voucher_digunakan = False
 
         if data_pengguna.get('punya_voucher', False):
@@ -485,8 +481,13 @@ def pesan_buket_template(data_pengguna):
                 voucher_digunakan = True
                 print(f"[🎉] Harga setelah diskon: Rp {harga_final:,}")
         
+        if data_pengguna['saldo'] <= 0:
+            print("\n[!] Saldo Anda Rp 0. Pembelian dihentikan. Silakan Top Up.")
+            time.sleep(2)
+            return
+            
         if data_pengguna['saldo'] < harga_final:
-            print("\n[!] Saldo Anda tidak mencukupi untuk pesanan ini.")
+            print(f"\n[!] Saldo Anda (Rp {data_pengguna['saldo']:,}) tidak mencukupi untuk pesanan (Rp {harga_final:,}).")
             time.sleep(2)
             return
             
@@ -494,9 +495,10 @@ def pesan_buket_template(data_pengguna):
 
         if konfirmasi_pesan == 'y':
             semua_pesanan = muat_pesanan()
-            id_pesanan_baru = len(semua_pesanan) + 1
+            
+            id_pesanan_baru = len(semua_pesanan) + 1 
             pesanan_baru = {
-                "id": id_pesanan_baru,
+                "id": id_pesanan_baru, 
                 "username": data_pengguna['username'],
                 "jenis": "template",
                 "item": item_dipilih, 
@@ -509,9 +511,11 @@ def pesan_buket_template(data_pengguna):
             simpan_pesanan(semua_pesanan)
             
             daftar_pengguna_update = muat_users()
+            saldo_user_terbaru = 0 
             for user in daftar_pengguna_update:
                 if user['username'] == data_pengguna['username']:
                     user['saldo'] -= harga_final
+                    saldo_user_terbaru = user['saldo'] 
                     if voucher_digunakan:
                         user['punya_voucher'] = False
                     break
@@ -519,32 +523,28 @@ def pesan_buket_template(data_pengguna):
             
             daftar_bunga_update = muat_bunga()
             for bunga in daftar_bunga_update:
-                 if bunga['id'] == item_dipilih['id']:
-                      bunga['stok'] -= 1
-                      break
+                if bunga['id'] == item_dipilih['id']: 
+                    bunga['stok'] -= 1
+                    break
             simpan_bunga(daftar_bunga_update)
-            pesanan_baru['stok_dikurangi'] = True 
-            simpan_pesanan(semua_pesanan) 
-
+            
             print("\n[✓] Pembelian berhasil! Pesanan sedang diproses.")
-            # Invoice sederhana
-            print("\n--- INVOICE ---")
+            print("\n--- STRUK ---")
             print(f"ID Pesanan : {pesanan_baru['id']}")
-            print(f"Item       : {item_dipilih['nama']}")
+            print(f"Item 	 	 : {item_dipilih['nama']}")
             if voucher_digunakan:
-                 print(f"Harga Asli : Rp {harga_asli:,}")
-                 print("Diskon     : 50%")
+                print(f"Harga Asli : Rp {harga_asli:,}")
+                print("Diskon 	 : 50%")
             print(f"Total Bayar: Rp {harga_final:,}")
-            print(f"Sisa Saldo : Rp {user['saldo']:,}") 
+            print(f"Sisa Saldo : Rp {saldo_user_terbaru:,}") 
             input("\nTekan Enter untuk kembali...")
 
         else:
-             print("\nPembelian dibatalkan.")
-             time.sleep(2)
+            print("\nPembelian dibatalkan.")
+            time.sleep(2)
     else:
         print("\n[!] ID tidak valid.")
         time.sleep(2)
-
 '''=================================================================================================================================='''
 '''                                                       PESANAN BUKET KUSTOM                                                      '''
 '''=================================================================================================================================='''
@@ -681,7 +681,7 @@ def pesan_buket_kustom(data_pengguna):
     simpan_users(daftar_pengguna)
 
     print("\n[✓] Pesanan berhasil dibuat.")
-    print(f"Pesanan ID #{pesanan_baru['id']} sedang diproses.")
+    
     input("\nTekan Enter untuk kembali...")
 
 '''=================================================================================================================================='''
@@ -812,7 +812,7 @@ def kelola_pesanan():
                             if user['pembelian_selesai'] % 3 == 0:
                                 if user.get('punya_voucher', False) == False:
                                     user['punya_voucher'] = True
-                                    print(f"[!] Pengguna {user['username']} mendapatkan voucher!")
+                                    print(f"[!] Pengguna mendapatkan voucher!")
                             break
                     simpan_users(daftar_pengguna)
                 else:
