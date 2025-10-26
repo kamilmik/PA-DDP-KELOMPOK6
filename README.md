@@ -5,12 +5,27 @@ TEMA : SISTEM MANAJEMEN BOUKET BUNGA
 - Rija Aulia Mayatri	2509116011
 - Muhammad Ibrahim Kamil	2509116012
 
+# FLOWCHART
+## Menu Utama
+<img width="901" height="611" alt="pemesanan buket online-Menu Utama drawio" src="https://github.com/user-attachments/assets/a2e1ca6e-0c67-4410-a793-0611e07414e1" />\
+## Menu Admin
+<img width="2638" height="2459" alt="pemesanan buke online-Menu Admin drawio" src="https://github.com/user-attachments/assets/45e550a3-5350-42ab-8885-aa49ed5349ff" />\
+## Registrasi Pengguna
+<img width="953" height="1299" alt="pemesanan buke online-Registrasi pengguna drawio" src="https://github.com/user-attachments/assets/b4fd5ca2-dda6-48b4-841c-7f18bdd99096" />\
+## Menu Pengguna
+<img width="1954" height="2862" alt="pemesanan buke online-Menu user drawio" src="https://github.com/user-attachments/assets/31369d7c-6a7f-4f98-8652-b94323ea0752" />\
+
+
 ## Penjelasan Garis Besar Program: 
 Pada program ini, terdapat 2 jenis Akun yaitu Admin dan User,  Admin juga memiliki 2 peran (Peran CRUD dan Peran Mengelola Pesanan)\
 Admin CRUD dapat memanipulasi buket (terkhusus buket bunga template) seperti menambahkan, mengedit, dan menghapus. sedangkan\
 Admin kelola pesanan memiliki hak untuk mengubah status pesanan (terkhusus buket bunga Kustom). Untuk User, User memiliki\
 hak untuk memesan buket - baik itu template maupun kustom - dan juga topup emoney berupa saldo. Terdapat juga sistem login\
 Yang dibagi login dan register (untuk pengguna).
+
+## Program Unggulan:
+Program yang menurut kami adalah ungulan adalah adanya sistem kustom buket bunga, sehingga dalam pembelian tidak terlalu repetitif\
+tetapi bisa mix and match. serta ada juga sistem diskon 50% jika user sudah membeli di toko kami sebanyak 3 kali.
 
 ## MENU UTAMA :
 Pada awal membuka program akan diberi 3 pilihan, 1. Admin, 2. Pengguna, 3.Keluar.\
@@ -212,8 +227,6 @@ dilakukan user (yang sedang login), lalu ada menu opsi memilih 1. Beli Bunga, 2.
 
 - 3. Logout
      jika user memilih tombol logout maka program akan mengalihkan user ke menu awal.\
-
-### VOUCHER 50%
 
 
 
